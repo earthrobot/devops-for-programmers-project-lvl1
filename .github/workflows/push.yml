@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: compose-test
-        run: make ci
+        run: echo ${{ secrets.DOCKERHUB_USERNAME }}
   build-push:
     runs-on: ubuntu-latest
     steps:
