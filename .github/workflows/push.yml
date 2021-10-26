@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: compose-test
-        run: echo ${{ secrets.DOCKERHUB_USERNAME }}
+        run: docker-compose -f docker-compose.yml up --abort-on-container-exit
   build-push:
     runs-on: ubuntu-latest
     steps:
@@ -31,4 +31,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: user/app:latest
+          tags: earthrobot/devops-for-programmers-project-lvl1:latest
