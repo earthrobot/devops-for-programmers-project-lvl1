@@ -8,8 +8,10 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
       - name: compose-test
-        run: docker-compose -f docker-compose.yml up --abort-on-container-exit
+        run: make ci
   build-push:
     runs-on: ubuntu-latest
     steps:
