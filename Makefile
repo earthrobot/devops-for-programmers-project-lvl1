@@ -1,3 +1,6 @@
+install:
+	cp .env.example .env
+	cd app && npm ci
 start:
 	docker-compose up
 ci:

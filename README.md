@@ -14,6 +14,9 @@
 * docker compose
 * make
 
+### Install
+```$ make install```
+
 ### Start
 ```$ make start```
 
